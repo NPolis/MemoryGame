@@ -35,9 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function matchCheck() {
 
         if (card1.children[0].children[1].children[0].classList.value === card2.children[0].children[1].children[0].classList.value) {
-            card1.classList.add("match")
-            card2.classList.add("match")
-
+            card1.classList.add("shake-match") 
+            card2.classList.add("shake-match")
+            card1.children[0].children[1].classList.add("match")
+            card2.children[0].children[1].classList.add("match")
         } else {
             card1.classList.remove("select")
             card2.classList.remove("select")
