@@ -3,7 +3,9 @@
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-}
+    background: linear-gradient(to bottom, #4facfe, #08da8d);
+
+} 
 
 .card {
 
@@ -15,7 +17,7 @@
     width: 125px;
     margin-right: 5px;
     border-radius: 10px;
-    background-color: rgb(175, 122, 223);
+    background-color: rgb(131, 61, 197);
     text-align: center;
     
 }
@@ -31,10 +33,39 @@ i {
 
 }
 .fa-heart{
-    color: rgb(213, 3, 147);
+    color: #ff0033;
+    
 }
-
-
+.fa-carrot {
+    color: orangered;
+}
+.fa-rainbow {
+    font-size: 64px; 
+    background: linear-gradient(45deg, red, orange, yellow, green, rgb(0, 94, 255), indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+.fa-star {
+    font-size: 64px;
+  background: linear-gradient(45deg, #ffd700, #ffb300, #f9a602);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.fa-car {
+    color: rgb(81, 79, 79);
+}
+.fa-moon {
+    font-size: 64px;
+  background: linear-gradient(45deg, #e0e5ec, #c0c0c0, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.fa-dove{
+    color: #e6e6e6;
+}
 
 .flip-card {
     margin-right: 5px;
@@ -69,6 +100,9 @@ i {
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
   }
   
@@ -81,7 +115,7 @@ i {
   
   /* Style the back side */
   .flip-card-back {
-    background-color: green;
+    background-color: rgb(237, 237, 110);
     color:plum;
     transform: rotateY(180deg);
     border-radius: 10px;
@@ -104,6 +138,36 @@ i {
 }
 
 .match{
-    background-color: blue;
+    background-color: rgb(230, 174, 174);
     
+}
+
+.win-card {
+    border: 1px solid rgb(213, 238, 19);
+    background-color: #ff0033;
+    height: 100px;
+    width: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+.win-class { 
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#desk{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.play-again-button{
+    border: 1px solid black;
+    background-color: #343adb;
+    cursor: pointer;
 }
