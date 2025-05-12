@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     shaffle()
+    let lockCard = false
     let card1 = ""
     let card2 = ""
     let counter = 0
@@ -42,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let card of cards) {
             card.addEventListener("click", function (event) {
                 //event.stopPropagation()
+                if (lockCard === true) {
+                  return  
+                }
                 let target = event.target.parentElement.parentElement
 
 
@@ -55,8 +59,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     } else {
                         card2 = target
-                        setTimeout(matchCheck, 800)
-
+                        lockCard = true
+                        
+                        setTimeout(() => {
+                            matchCheck()
+                            lockCard = false
+                        }, 800 )
 
                     }
 
